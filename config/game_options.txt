@@ -94,10 +94,10 @@ ROUNDSTART_BLUE_ALERT 1
 ## GAME MODES ###
 
 ## Uncomment to not send a roundstart intercept report.
-#NO_INTERCEPT_REPORT
+NO_INTERCEPT_REPORT
 
 ## Uncomment to exclude dynamic info in the roundstart report.
-#NO_DYNAMIC_REPORT
+NO_DYNAMIC_REPORT
 
 ## Percent weight reductions for three of the most recent modes
 
@@ -157,10 +157,10 @@ DYNAMIC_CONFIG_ENABLED
 
 ## RANDOM EVENTS ###
 ## Comment this out to disable random events during the round.
-ALLOW_RANDOM_EVENTS
+#ALLOW_RANDOM_EVENTS
 
 ## Uncomment this to disable station traits.
-#FORBID_STATION_TRAITS
+FORBID_STATION_TRAITS
 
 ## The lower bound, in deciseconds, for how soon another random event can be scheduled.
 ## Defaults to 1500 deciseconds or 2.5 minutes
@@ -222,7 +222,7 @@ MINIMAL_ACCESS_THRESHOLD 20
 #SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
-#EVERYONE_HAS_MAINT_ACCESS
+EVERYONE_HAS_MAINT_ACCESS
 
 ## Comment this out this to make security officers spawn in departmental security posts
 #SEC_START_BRIG
@@ -231,7 +231,7 @@ MINIMAL_ACCESS_THRESHOLD 20
 ## Set to 0/commented out for "off", Departmental Security Officers will never get additional room-specific access (beyond general departmental doors).
 ## Set to 1 if you want to enable "Scaling Access", where Departmental Security Officers will get access to most rooms within a department depending on how many security officers there are relative to the number of people on a station.
 ## Set to 2 if you want Departmental Security Officers to always have access to all rooms in a department.
-DEPSEC_ACCESS_LEVEL 1
+DEPSEC_ACCESS_LEVEL 2
 
 
 ## GHOST INTERACTION ###
@@ -277,8 +277,6 @@ SPECIFIED_LAWS asimovpp
 ## See datums\ai_laws.dm for the full law lists
 
 ## standard-ish laws. These are fairly ok to run
-RANDOM_LAWS asimov
-RANDOM_LAWS asimovpp
 RANDOM_LAWS paladin
 RANDOM_LAWS robocop
 RANDOM_LAWS corporate
@@ -322,8 +320,6 @@ LAW_WEIGHT custom,0
 LAW_WEIGHT armadyne_safeguard,40
 LAW_WEIGHT dagothbot,8
 #NOVA EDIT ADDITION END
-LAW_WEIGHT asimov,0
-LAW_WEIGHT asimovpp,5
 LAW_WEIGHT paladin,5
 LAW_WEIGHT paladin5,5
 LAW_WEIGHT robocop,5
@@ -595,7 +591,7 @@ DISABLE_QUIRK_POINTS
 # If set to -1, then players will be able to select any quantity of positive quirks.
 # If set to 0, then players won't be able to select any positive quirks.
 # If commented-out or undefined, the maximum default is 6.
-MAX_POSITIVE_QUIRKS 6
+MAX_POSITIVE_QUIRKS -1
 
 # A config that skews with the random spawners weights
 # If the value is lower than 1, it'll tend to even out the odds
