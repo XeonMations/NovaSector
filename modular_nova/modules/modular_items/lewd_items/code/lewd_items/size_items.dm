@@ -17,17 +17,7 @@
 	/// What size do we want to set the wearer to when they wear the collar?
 	var/target_size = 1
 	/// What areas people are allowed to use this in
-	var/list/whitelisted_areas = list(
-		/area/centcom/interlink/dorm_rooms,
-		/area/centcom/holding/cafedorms,
-		/area/misc/hilbertshotel,
-		/area/misc/condo,
-		/area/virtual_domain,
-		/area/space/virtual_domain,
-		/area/ruin/space/virtual_domain,
-		/area/icemoon/underground/explored/virtual_domain,
-		/area/lavaland/surface/outdoors/virtual_domain,
-	)
+	var/list/whitelisted_areas = list()
 
 /obj/item/clothing/neck/size_collar/attack_self(mob/user, modifiers)
 	. = ..()
@@ -109,8 +99,7 @@
 
 /// Checks if we need to revert our size when entering a different area.
 /datum/component/temporary_size/proc/check_area()
-	var/area/current_area = get_area(parent)
-	if(!length(allowed_areas) || is_type_in_list(current_area, allowed_areas))
+	if(!length(allowed_areas))
 		apply_size(target_size)
 		return TRUE
 

@@ -138,9 +138,9 @@ DISABLE_ROAMING_BOH_SINGULARITY
 ICECATS_POLICY_LINK "https://wiki.novasector13.com/index.php/Ghost_Role_policy#Icewalkers"
 
 ## What is the maximum size (in percents) we want people to be able to use with the size collar?
-SIZE_COLLAR_MAXIMUM 400
+SIZE_COLLAR_MAXIMUM 800
 ## What is the minimum size (in percents) we want people to be able to use with the size collar?
-SIZE_COLLAR_MINIMUM 15
+SIZE_COLLAR_MINIMUM 10
 
 ## Uncomment to enable minimum flavor text requirements for joining the round
 #MIN_FLAVOR_TEXT
