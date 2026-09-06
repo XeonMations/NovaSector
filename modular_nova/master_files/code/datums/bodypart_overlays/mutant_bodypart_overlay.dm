@@ -36,7 +36,7 @@
 		return FALSE
 	var/datum/mutant_bodypart/mutant_part = mutantparts_list[feature_key]
 	sprite_datum = fetch_sprite_datum_from_name(accessory_name ? accessory_name : mutant_part.name)
-	modsuit_affected = sprite_datum.use_custom_mod_icon
+	modsuit_affected = sprite_datum.flags_custom_mod_icon
 	draw_color = mutant_part.get_colors()
 	emissive_eligibility_by_color_index = mutant_part.get_emissive_tri_bool_list()
 	return TRUE
@@ -55,6 +55,7 @@
 	. = list()
 	. += "[get_base_icon_state()]"
 	. += "[get_feature_key_for_overlay()]"
+	. += "[sprite_datum.get_special_icon(limb?.owner)]"
 
 	// MOD overlays on mutant parts
 	if(modsuit_affected && sprite_datum?.mod_overlay_active(limb?.owner))
